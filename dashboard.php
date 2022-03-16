@@ -27,17 +27,55 @@
          <div class="card mx-auto" style="width: 18rem;">
             <img class="card-img-top mx-auto" style="width:60%;" src="./images/userid.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title"><i class="fa fa-user"></i>Perfil</h5>
-              <p class="card-text"><i class="fa fa-user"></i>Marlon Paulo</p>
-              <p class="card-text">Admin</p>
-              <p class="card-text">Ultimo login</p>
+              <h5 class="card-title">Perfil</h5>
+              <p class="card-text"><i class="fa fa-user">&nbsp;</i>Marlon Paulo</p>
+              <p class="card-text"><i class="fa fa-user">&nbsp;</i>Admin</p>
+              <p class="card-text">Ultimo login: xx:xx xx/xx/xx</p>
               <a href="#" class="btn btn-primary"><i class="fa fa-edit">&nbsp;</i>Editar Perfil</a>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-8">
+           <div class="jumbotron" style="width: 100%;height: 100%;">
+            <h1>Bem vindo Admin</h1>
+            <div class="row">
+              <div class="col-sm-6">
+                <table>
+                <tr><td style="text-align: center;"><canvas id="canvas_tt6232204b67114" width="175" height="175"></canvas></td></tr>
+                <tr><td style="text-align: center; font-weight: bold"><a href="//24timezones.com/Rio-de-Janeiro/horas" style="text-decoration: none" class="clock24" id="tz24-1647452235-c1213-eyJzaXplIjoiMTc1IiwiYmdjb2xvciI6IjAwOTlGRiIsImxhbmciOiJwdCIsInR5cGUiOiJhIiwiY2FudmFzX2lkIjoiY2FudmFzX3R0NjIzMjIwNGI2NzExNCJ9" title="Rio de Janeiro hora atual" target="_blank" rel="nofollow">Hora local em Rio de Janeiro</a></td></tr>
+                </table>
+                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Gerenciar categorias</h5>
+                    <p class="card-text">Aqui você pode adicionar categorias e sub categorias</p>
+                    <a href="#" class="btn btn-primary">Nova categoria</a>
+                    <a href="#" class="btn btn-primary">Gerenciar categoria</a>
+                  </div>
+                </div>
             </div>
           </div>
          </div>
        </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gerenciar categorias</h5>
+              <p class="card-text">Aqui você consegue</p>
+              <a href="#" class="btn btn-primary">Novos pedidos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
     
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
