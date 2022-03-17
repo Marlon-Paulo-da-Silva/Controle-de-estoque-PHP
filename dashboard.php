@@ -68,7 +68,7 @@
             <div class="card-body">
               <h5 class="card-title">Gerenciar categorias</h5>
               <p class="card-text">Aqui você consegue gerenciar categorias e sub-categorias</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#formCategoryModal">Adicionar</a>
               <a href="#" class="btn btn-primary">Gerenciar</a>
             </div>
           </div>
@@ -78,7 +78,7 @@
             <div class="card-body">
               <h5 class="card-title">Marcas</h5>
               <p class="card-text">Aqui você consegue gerenciar as marcas</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#formBrandModal">Adicionar</a>
               <a href="#" class="btn btn-primary">Gerenciar</a>
             </div>
           </div>
@@ -88,12 +88,27 @@
             <div class="card-body" >
               <h5 class="card-title">Produtos</h5>
               <p class="card-text">Aqui você consegue gerenciar os produtos</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#formProductsModal">Adicionar</a>
               <a href="#" class="btn btn-primary">Gerenciar</a>
             </div>
           </div>
         </div>
       </div>
+
+      <?php 
+        //Category form
+        include("./templates/category.php");
+      ?>
+      <?php 
+        //brand form
+        include("./templates/brand.php");
+      ?>
+      <?php 
+        //products form
+        include("./templates/products.php");
+      ?>
+
+      
     
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
