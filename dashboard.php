@@ -49,10 +49,9 @@
               <div class="col-sm-6">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Gerenciar categorias</h5>
-                    <p class="card-text">Aqui você pode adicionar categorias e sub categorias</p>
-                    <a href="#" class="btn btn-primary">Nova categoria</a>
-                    <a href="#" class="btn btn-primary">Gerenciar categoria</a>
+                    <h5 class="card-title">Novos Pedidos</h5>
+                    <p class="card-text">Aqui você consegue criar pedidos e notas fiscais</p>
+                    <a href="#" class="btn btn-primary">Novo pedido</a>
                   </div>
                 </div>
             </div>
@@ -60,22 +59,41 @@
          </div>
        </div>
     </div>
-
-    <div class="container">
-      <div class="row">
+    <p></p>
+    <p></p>
+    
+      <div class="row" style="">
         <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Gerenciar categorias</h5>
-              <p class="card-text">Aqui você consegue</p>
-              <a href="#" class="btn btn-primary">Novos pedidos</a>
+              <p class="card-text">Aqui você consegue gerenciar categorias e sub-categorias</p>
+              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary">Gerenciar</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Marcas</h5>
+              <p class="card-text">Aqui você consegue gerenciar as marcas</p>
+              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary">Gerenciar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-body" >
+              <h5 class="card-title">Produtos</h5>
+              <p class="card-text">Aqui você consegue gerenciar os produtos</p>
+              <a href="#" class="btn btn-primary">Adicionar</a>
+              <a href="#" class="btn btn-primary">Gerenciar</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

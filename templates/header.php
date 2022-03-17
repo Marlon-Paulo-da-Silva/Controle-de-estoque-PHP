@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#"><i class="fa fa-home">&nbsp;</i>Inicial</a>
-        <a class="nav-item nav-link active" href="#"><i class="fa fa-user">&nbsp;</i>Logout</a>
+        <a class="nav-item nav-link active" href="#"><i class="fa fa-user">&nbsp;</i>Sair</a>
       </div>
     </div>
   </nav>
