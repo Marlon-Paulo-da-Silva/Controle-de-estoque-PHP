@@ -41,7 +41,7 @@
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-lock">&nbsp;</i> Entrar</button>
-                    <span><a href="#">Registrar</a></span>
+                    <span><a href="register.php">Registrar</a></span>
                 </form>
             </div>
             <div class="card-footer"><a href="#">Esqueceu a senha ?</a></div>
