@@ -27,13 +27,31 @@
 
     }
     public function createUserAccount($username, $email, $password, $usertype){
-      
-      $pre_stmt = $this->con->prepare("");
+      if($this->emailExists($email)){
+        return "EMAIL_ALREADY_EXISTS";
+      } else {
+        $pass_hash = password_hash($password, PASSWORD_BCRYPT, ["cost" => 8]);
+
+        $date = date("d-m-Y");
+        $notes = "";
+        
+        $pre_stmt = $this->con->prepare("INSERT INTO `user`(`username`, `email`, `password`, `usertype`, `register_date`, `last_login`, `notes`) VALUES (?,?,?,?,?,?,?)");
+        $pre_stmt->bind_param("sssssss", $username, $email, $pass_hash, $usertype, $date, $date, $notes);
+        $result = $pre_stmt->execute() or die($this->con->error);
+        if($result) {
+          return $this->con->insert_id;
+        } else {
+          return "SOME_ERROR";
+        }
+
+      }
     }
 
   }
 
-  $obj = new User();
+
+  $user = new User();
+  echo $user->createUserAccount("Marlon2","marlon2@gmail.com","senhateste","Admin");
 
 ?>
 
