@@ -32,7 +32,7 @@
       } else {
         $pass_hash = password_hash($password, PASSWORD_BCRYPT, ["cost" => 8]);
 
-        $date = date("d-m-Y");
+        $date = date('d-m-Y');
         $notes = "";
         
         $pre_stmt = $this->con->prepare("INSERT INTO `user`(`username`, `email`, `password`, `usertype`, `register_date`, `last_login`, `notes`) VALUES (?,?,?,?,?,?,?)");
@@ -62,7 +62,19 @@
           $_SESSION["username"] = $row["username"];
           $_SESSION["last_login"] = $row["last_login"];
 
+          //atualizando a data do ultimo login
+          $last_login = date('d-m-Y h:m:s');
           $pre_stmt =  $this->con->prepare("UPDATE user SET last_login = ? WHERE email = ?");
+          $pre_stmt->bind_param("ss", $last_login, $email);
+          $result = $pre_stmt->execute() or die($this->con->error);
+          if($result){
+            return 1;
+          } else {
+            return 0;
+          }
+
+        } else {
+          return "Password não encontrado";
         }
       }
     }
@@ -70,8 +82,10 @@
   }
 
 
-  $user = new User();
-  echo $user->createUserAccount("Marlon2","marlon2@gmail.com","senhateste","Admin");
+  // $user = new User();
 
+  // echo $user->userLogin("marlon2@gmail.com","senhateste");
+
+  // echo $_SESSION["username"]
 ?>
 

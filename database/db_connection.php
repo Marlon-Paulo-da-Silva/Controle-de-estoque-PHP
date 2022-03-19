@@ -9,7 +9,7 @@ class Database{
     //Ambiente de desenvolvimento
     include_once("constants_dev.php");
     $this->con = new Mysqli(HOST, USER, PASS, DB);
-
+    
     if($this->con) {
       return $this->con;
     } 

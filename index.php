@@ -12,12 +12,14 @@
   
   <script type="text/javascript" src="./js/main.js"></script>
   <script src=""></script>
+  
 </head>
 
 <body>
 
     <!-- Navbar -->
     <?php include_once("./templates/header.php"); ?>
+    
 
     <br/><br/>
 
