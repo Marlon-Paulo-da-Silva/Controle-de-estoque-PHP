@@ -11,7 +11,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
   <script type="text/javascript" src="./js/main.js"></script>
-  <script src=""></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
           Registrar
         </div>
         <div class="card-body">
-          <form id="register_form">
+          <form id="register_form" onsubmit="return false" autocomplete="off">
           <div class="form-group">
             <label for="exampleInputEmail1">Nome completo</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome">
