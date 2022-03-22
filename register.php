@@ -10,7 +10,7 @@
   
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
-  <script type="text/javascript" src="./js/functions.js"></script>
+  
 </head>
 
 <body>
@@ -30,32 +30,38 @@
         <div class="card-body">
           <form id="register_form" onsubmit="return false" autocomplete="off">
           <div class="form-group">
-            <label for="exampleInputEmail1">Nome completo</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome">
+            <label for="username">Nome completo</label>
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Digite seu nome">
+            <small id="u_error" class="form-text text-muted"></small>
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">E-mail</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Digite seu e-mail">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+            <small id="e_error" class="form-text text-muted"></small>
           </div>
 
           <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" class="form-control" id="password" placeholder="Digita sua senha">
+            <label for="password1">Senha</label>
+            <input type="password" class="form-control" id="password1" placeholder="Digita sua senha">
+            <small id="p1_error" class="form-text text-muted"></small>
           </div>
           
           <div class="form-group">
             <label for="password2">Confirmação de Senha</label>
             <input type="password" class="form-control" id="password2" placeholder="Digita sua senha novamente">
+            <small id="p2_error" class="form-text text-muted"></small>
           </div>
           
                 
           <div class="form-group">
-            <label for="userType">Tipo de usuário</label>
+            <label for="usertype">Tipo de usuário</label>
             <select name="usertype" class="form-control" id="usertype">
+              <option value="">Escolha o tipo de usuário</option>
               <option value="1">Administrador</option>
               <option value="0">Outro</option>
             </select>
+            <small id="t_error" class="form-text text-muted"></small>
           </div>
                    
           <button type="submit" name="user_register" class="btn btn-primary"><span class="fa fa-user"></span>&nbsp;Registrar</button>
@@ -69,16 +75,16 @@
     </div>
 
     
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+  <script type="text/javascript" src="./js/functions.js"></script>
 </body>
 
 </html>
