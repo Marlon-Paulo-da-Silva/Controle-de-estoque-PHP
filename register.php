@@ -10,7 +10,7 @@
   
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/functions.js"></script>
 </head>
 
 <body>
