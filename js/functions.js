@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var DOMAIN = "http://localhost/Controle-de-estoque-PHP/";
+
    $("#register_form").on("submit", function(){
        var status = false;
        var name = $("#username");
@@ -51,13 +53,23 @@ $(document).ready(function(){
 
         if(type.val() == ""){
             type.addClass("border-danger");
-            $("#t_error").html("<span class='text-danger'>Por favor, digite uma senha válida maior que 9 caracteres</span>");
+            $("#t_error").html("<span class='text-danger'>Por favor, escolha o tipo de cadastro</span>");
             status = false;
         } else {
             type.removeClass("border-danger");
             $("#t_error").html("");
             status = true;
         }
+        if(pass1.val() == pass2.val()){
+            $.ajax({
+                url: DOMAIN+"/includes/process.php",
+            })
+        } else {
+            pass2.addClass("border-danger");
+            $("#p2_error").html("<span class='text-danger'>A senha não confere</span>");
+            status = true;
+        }
+
        
    })
 });
