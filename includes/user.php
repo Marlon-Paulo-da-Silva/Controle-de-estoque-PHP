@@ -85,6 +85,7 @@
   // $user = new User();
 
   // echo $user->userLogin("marlon2@gmail.com","senhateste");
+  // echo $user->createUserAccount("Marlon Paulo", "marlon3@gmail.com", "senhateste", 1);
 
   // echo $_SESSION["username"]
 ?>

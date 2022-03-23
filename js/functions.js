@@ -60,14 +60,28 @@ $(document).ready(function(){
             $("#t_error").html("");
             status = true;
         }
-        if(pass1.val() == pass2.val()){
+        console.log("status"+status);
+        if((pass1.val() == pass2.val()) && status == true){
             $.ajax({
                 url: DOMAIN+"/includes/process.php",
+                method: "POST",
+                data: $("#register_form").serialize(),
+                success: function(data){
+                    if (data == "EMAIL_ALREADY_EXISTS") {
+                        alert("Esse e-mail já existe");
+                    } else if(data == "SOME_ERROR"){
+                        alert("Aconteceu um erro");
+                    } else {
+                        alert("Deu tudo certo");
+                        alert(data);
+                        // window.location.href = encodeURI(DOMAIN+"/index.php?msg=Você foi registrado, agora pode acessar o sistema"); 
+                    }
+                }
             })
         } else {
             pass2.addClass("border-danger");
             $("#p2_error").html("<span class='text-danger'>A senha não confere</span>");
-            status = true;
+            status = false;
         }
 
        
