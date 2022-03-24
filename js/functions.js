@@ -60,18 +60,28 @@ $(document).ready(function(){
             $("#t_error").html("");
             status = true;
         }
-        console.log("status"+status);
         if((pass1.val() == pass2.val()) && status == true){
+
+            
+
+            console.log($("#register_form"));
             $.ajax({
                 url: DOMAIN+"/includes/process.php",
                 method: "POST",
-                data: $("#register_form").serialize(),
+                // data: $("#register_form").serialize(),
+                data:{
+                    nameAdd: $('#completename').val();
+                    emailAdd: $('#completeemail').val();
+                    phoneAdd: $('#completephone').val();
+                    addressAdd: $('#completeaddress').val();
+                },
                 success: function(data){
                     if (data == "EMAIL_ALREADY_EXISTS") {
                         alert("Esse e-mail já existe");
                     } else if(data == "SOME_ERROR"){
                         alert("Aconteceu um erro");
                     } else {
+                        console.log(data);
                         alert("Deu tudo certo");
                         alert(data);
                         // window.location.href = encodeURI(DOMAIN+"/index.php?msg=Você foi registrado, agora pode acessar o sistema"); 
