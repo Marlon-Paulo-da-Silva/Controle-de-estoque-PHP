@@ -70,10 +70,10 @@ $(document).ready(function(){
                 method: "POST",
                 // data: $("#register_form").serialize(),
                 data:{
-                    nameAdd: $('#completename').val();
-                    emailAdd: $('#completeemail').val();
-                    phoneAdd: $('#completephone').val();
-                    addressAdd: $('#completeaddress').val();
+                    username: $('#username').val(),
+                    email: $('#email').val(),
+                    password1: $('#password1').val(),
+                    usertype: $('#usertype').val()
                 },
                 success: function(data){
                     if (data == "EMAIL_ALREADY_EXISTS") {
