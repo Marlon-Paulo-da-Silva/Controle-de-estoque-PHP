@@ -96,4 +96,38 @@ $(document).ready(function(){
 
        
    })
+
+
+   //Para o login
+   $("#login_form").on("submit", function(){
+    var email = $("#log_email");
+    var pass = $("#log_pass");
+    var status = false;
+
+    if(email.val() == ""){
+        email.addClass("border-danger");
+        $("#e_error").html("<span class='text-danger'>Por favor, insira um e-mail</span>");
+        status = false;
+    } else {
+        email.removeClass("border-danger");
+        $("#e_error").html("");
+        status = true;
+    }
+
+    if(pass.val() == ""){
+        pass.addClass("border-danger");
+        $("#p_error").html("<span class='text-danger'>Por favor, insira uma senha</span>");
+        status = false;
+    } else {
+        pass.removeClass("border-danger");
+        $("#p_error").html("");
+        status = true;
+    }
+
+    if(status){
+        alert("pronto");
+    }
+
+   })
+
 });

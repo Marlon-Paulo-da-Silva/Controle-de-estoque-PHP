@@ -10,8 +10,7 @@
   
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
-  <script type="text/javascript" src="./js/main.js"></script>
-  <script src=""></script>
+  
   
 </head>
 
@@ -42,15 +41,16 @@
             <img class="card-img-top mx-auto" style="width: 60%;" src="./images/user-icon.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"></h5>
-                <form id="form_register" onsubmit="return false">
+                <form id="login_form" onsubmit="return false">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <label for="log_email">E-mail</label>
+                        <input type="email" class="form-control" name="log_email" id="log_email" aria-describedby="log_email" placeholder="Insira seu e-mail">
+                        <small id="e_error" class="form-text text-muted">E-mail não confere</small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="log_pass">Password</label>
+                        <input type="password" class="form-control" id="log_pass" name="log_pass" placeholder="Insira sua senha">
+                        <small id="p_error" class="form-text text-muted">Senha não confere</small>
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -73,6 +73,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+  <script type="text/javascript" src="./js/functions.js"></script>
+
 </body>
 
 </html>
