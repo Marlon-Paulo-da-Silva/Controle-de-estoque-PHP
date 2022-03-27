@@ -84,7 +84,7 @@ $(document).ready(function(){
                         console.log(data);
                         alert("Deu tudo certo");
                         alert(data);
-                        // window.location.href = encodeURI(DOMAIN+"/index.php?msg=Você foi registrado, agora pode acessar o sistema"); 
+                        window.location.href = encodeURI(DOMAIN+"/index.php?msg=Você foi registrado, agora pode acessar o sistema"); 
                     }
                 }
             })

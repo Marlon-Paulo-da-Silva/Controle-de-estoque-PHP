@@ -24,11 +24,25 @@
     <br/><br/>
 
     <div class="container">
+
+        <?php
+          if(isset($_GET["msg"]) AND !empty(isset($_GET["msg"]))){
+            ?>
+              
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                <?php echo $_GET["msg"]; ?>
+              </div>
+            <?php
+          }
+
+
+        ?>
         <div class="card mx-auto" style="width: 21rem;">
             <img class="card-img-top mx-auto" style="width: 60%;" src="./images/user-icon.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"></h5>
-                <form>
+                <form id="form_register" onsubmit="return false">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
